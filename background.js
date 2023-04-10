@@ -30,22 +30,22 @@ function getBaseUrl(url) {
   return protocol + '//' + hostname + (port ? ':' + port : '');
 }
 
-function getMostUsedSites() {
-  chrome.topSites.get(function(sites) {
-    // console.log("Top 5 most visited sites:");
-    // console.log(sites);
-    for (var i = 0; i < 5; i++) {
-      const theurl=sites[i].url;
-      var baseUrl = getBaseUrl(theurl);
-      // console.log(baseUrl); // Output: "https://www.example.com"
-      const faviconUrl = `${baseUrl}/favicon.ico`;
-      let html=`<div class="iocon_container"><a href="${sites[i].url}"><img src="${faviconUrl}" alt="${sites[i].title.slice(0,10)}"></a></div>`
-      header.innerHTML=header.innerHTML+html;
-    }
-  });
-}
+// function getMostUsedSites() {
+//   chrome.topSites.get(function(sites) {
+//     // console.log("Top 5 most visited sites:");
+//     // console.log(sites);
+//     for (var i = 0; i < 5; i++) {
+//       const theurl=sites[i].url;
+//       var baseUrl = getBaseUrl(theurl);
+//       // console.log(baseUrl); // Output: "https://www.example.com"
+//       const faviconUrl = `${baseUrl}/favicon.ico`;
+//       let html=`<div class="iocon_container"><a href="${sites[i].url}"><img src="${faviconUrl}" alt="${sites[i].title.slice(0,10)}"></a></div>`
+//       header.innerHTML=header.innerHTML+html;
+//     }
+//   });
+// }
 
-getMostUsedSites();
+// getMostUsedSites();
 
 async function addckick(){
 //  console.log("on click in run");
