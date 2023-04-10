@@ -77,11 +77,6 @@ const deletefun=async()=>{
   localStorage.setItem('myArray', JSON.stringify(myArray));
   transverseArry();
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 49e55a7f14622a3ab451c60a9e68d2dd6410aeaa
 var el=document.querySelector(".btn")
 if(el){
   el.addEventListener("click",addckick);
