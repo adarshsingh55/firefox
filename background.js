@@ -53,9 +53,14 @@ const deletefun=async()=>{
   localStorage.setItem('myArray', JSON.stringify(myArray));
   transverseArry();
 }
-document.querySelector(".btn").addEventListener("click",addckick);
-document.querySelector(".btn").addEventListener("dbclick",addckick);
-document.querySelector(".btn-delete").addEventListener("click",deletefun);
+var el=document.querySelector(".btn")
+if(el){
+  el.addEventListener("click",addckick);
+}
+var dle=document.querySelector(".btn-delete")
+if(dle){
+dle.addEventListener("click",deletefun);
+}
 let arlength = arr.length;
 let url =`https://api.waifu.pics/sfw/${val}`;
 fetch(url).then(async (responce)=>{
